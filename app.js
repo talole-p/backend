@@ -8,7 +8,7 @@ Port= 3000;
 
 app.get('/',(req,res)=>{
     res.json({
-        msg: 'hosting online by Amit'
+        msg: 'hosting online by Amit github CI & CD tutorial'
     })
 })
 // create server
