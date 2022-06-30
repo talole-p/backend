@@ -1,6 +1,10 @@
 const express= require("express");
 const app = express();
+const http = require('http');
 require("./DB/conn")
+
+
+
 
 const Contact = require("./model/contactus")
 // set port 
@@ -12,8 +16,10 @@ app.use(express.json());
 // here set router
 app.use(routes.registration);
 
+app.set('port', Port);
+const server = http.createServer(app);
 
 // create server
-app.listen(Port,(req,res)=>{
+server.listen(Port,(req,res)=>{
     console.log(`${Port} Port activate successfully`)
 });
