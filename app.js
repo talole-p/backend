@@ -10,7 +10,7 @@ const routes= require('./routes/index')
 
 app.use(express.json());
 // here set router
-app.use('/api',routes.registration);
+app.use(routes.registration);
 
 
 // create server
