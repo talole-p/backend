@@ -8,7 +8,7 @@ Port= 3000;
 
 app.get('/',(req,res)=>{
     res.json({
-        msg: 'my first Java project host on AWS EC2 using  github CI & CD hosted by Amit Talole Patil',
+        msg: 'nodejs project host on AWS EC2 using  github CI & CD hosted by Amit Talole Patil',
     })
 })
 // create server
