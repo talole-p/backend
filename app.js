@@ -1,17 +1,19 @@
-const express = require('express')
+const express= require("express");
+const app = express();
+require("./DB/conn")
 
-const app = express()
+const Contact = require("./model/contactus")
+// set port 
+Port= process.env.Port||5000;
+// store router 
+const routes= require('./routes/index')
 
-app.use(express.json())
+app.use(express.json());
+// here set router
+app.use('/api',routes.registration);
 
-Port= 3000;
 
-app.get('/',(req,res)=>{
-    res.json({
-        msg: ' my first Java project host on AWS EC2 using  github CI & CD hosted by Saurabh Autade Patil',
-    })
-})
 // create server
-app.listen(3000,(req,res)=>{
-    console.log('3000 Port activate successfully')
+app.listen(Port,(req,res)=>{
+    console.log(`${Port} Port activate successfully`)
 });
