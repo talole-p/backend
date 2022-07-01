@@ -4,9 +4,6 @@ const http = require('http');
 require("./DB/conn")
 
 
-
-
-const Contact = require("./model/contactus")
 // set port 
 Port= process.env.Port||5000;
 // store router 
