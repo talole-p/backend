@@ -59,3 +59,20 @@ exports.addProductAsync = async ({url,code})=>{
     };
   }
 }
+
+exports.getProductAsync = async ({pageSize,pageLimit=10})=>{
+  try {
+    pageSize = Math.max(0,pageSize);
+    const result = await newProduct.find().limit(pageLimit).skip(pageLimit*pageSize).exec()
+    if (result) {
+      return { status: RESPONSE_STATUS.SUCCESS, data: result };
+    }
+    return { status: RESPONSE_STATUS.FAIL };
+  } catch (error) {
+    console.log(error);
+    return {
+      status: RESPONSE_STATUS.ERROR,
+      massage: error.massage,
+    };
+  }
+}

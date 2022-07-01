@@ -1,11 +1,11 @@
 const express= require("express");
 const app = express();
 const http = require('http');
+require('dotenv').config();
 require("./DB/conn")
 
-
 // set port 
-Port= process.env.Port||5000;
+const Port= process.env.PORT||5000;
 // store router 
 const routes= require('./routes/index')
 
