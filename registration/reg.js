@@ -1,4 +1,4 @@
-const { RESPONSE_STATUS, STATUS_CODE } = require('../constant/response-status')
+const { RESPONSE_STATUS } = require('../constant/response-status')
 const { MESSAGES } = require('../constant/msg')
 const {isEmailAddressValid,generateToken} = require('../utils/common')
 

@@ -100,4 +100,12 @@ const apiResponse = async ({ status, data, message }, res) => {
     }
   };
 
-  module.exports =  {apiResponse,generateToken,verifyToken,isEmailAddressValid}
+  const randomCode = ()=>{
+    try {
+      return code =  (Math.random() + 1).toString(36).substring(7)
+    } catch (error) {
+      return null
+    }
+  }
+
+  module.exports =  {apiResponse,generateToken,verifyToken,isEmailAddressValid,randomCode}

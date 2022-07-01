@@ -12,6 +12,7 @@ const routes= require('./routes/index')
 app.use(express.json());
 // here set router
 app.use(routes.registration);
+app.use(routes.short)
 
 app.set('port', Port);
 const server = http.createServer(app);

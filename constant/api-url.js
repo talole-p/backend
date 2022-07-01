@@ -1,5 +1,6 @@
 const API_URLS = {
-    Registration :'/registration'
+    Registration :'/registration',
+    shortcode: '/shortcode'
 }
 
 module.exports = { API_URLS };
