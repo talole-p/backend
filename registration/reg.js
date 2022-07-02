@@ -19,12 +19,12 @@ exports.reg =async (data)=>{
             message: MESSAGES.COMMON.EmailNotValid,
           };
         }
-        const checkExist = await checkUserExistWithEmailAsync({ email: data.email });
+        const checkExist = await checkUserExistWithEmailAsync({ email: data.email.toLowerCase() });
         if (checkExist.status !== RESPONSE_STATUS.FAIL) {
           return checkExist;
         }
         const response = await addUserByEmailAsync({
-          email: data.email,
+          email: data.email.toLowerCase(),
           password: data.password,
         });
         if (response.status !== RESPONSE_STATUS.SUCCESS) {
