@@ -18,9 +18,7 @@ const apiResponse = async ({ status, data, message }, res) => {
         statusCode = 400;
         statusMSG = message;
       }  else if (status === RESPONSE_STATUS.SUCCESS) {
-        // eslint-disable-next-line no-unused-vars
         statusCode = 200;
-        // eslint-disable-next-line no-unused-vars
         statusMSG = RESPONSE_STATUS.SUCCESS;
       }
     } catch (error) {
